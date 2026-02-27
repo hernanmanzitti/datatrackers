@@ -2495,30 +2495,6 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 //# sourceURL=js/wp-emoji-loader.min.js
   </script>
  <script>
-  /* ── FAQ Accordion ── */
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.elementskit-card-header a').forEach(function (toggle) {
-      toggle.addEventListener('click', function (e) {
-        e.preventDefault();
-        var targetId = this.getAttribute('data-target') || this.getAttribute('href');
-        if (!targetId) return;
-        var panel = document.querySelector(targetId);
-        if (!panel) return;
-        var isOpen = panel.classList.contains('show');
-        var parent = this.closest('.elementskit-accordion');
-        if (parent) {
-          parent.querySelectorAll('.collapse.show').forEach(function (p) { p.classList.remove('show'); });
-          parent.querySelectorAll('.elementskit-btn-link').forEach(function (l) { l.classList.add('collapsed'); });
-        }
-        if (!isOpen) {
-          panel.classList.add('show');
-          this.classList.remove('collapsed');
-        }
-      });
-    });
-  });
-  </script>
- <script>
   /* ── Hero Canvas Particle Network (Medano style) ── */
   (function () {
     var canvas = document.getElementById('hero-canvas');
@@ -2619,36 +2595,71 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
  </style>
 
  <script>
-  /* FAQ accordion */
-  document.querySelectorAll('.elementskit-card-header a[data-target]').forEach(function (toggler) {
-    toggler.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
+  /* FAQ accordion — fixed for ElementsKit handler conflict.
+   *
+   * Root cause: elementor.js binds a jQuery delegated click handler on
+   * '.elementskit-card-header' that calls toggleClass('active') on the
+   * parent card.  Because jQuery's delegated handlers run during the
+   * bubbling phase in registration order, and elementor.js is loaded
+   * BEFORE this inline script, the ElementsKit handler fires first and
+   * toggles 'active' onto the card.  When our handler then reads
+   * card.classList.contains('active') the class is already present, so
+   * we think the item is open and immediately close it — requiring a
+   * second click to actually open it.
+   *
+   * Fix strategy — capture phase + snapshot-before-ElementsKit:
+   *   1. Use addEventListener with useCapture = true on each accordion
+   *      CONTAINER.  Capture-phase listeners fire top-down, before any
+   *      bubbling-phase listener (including jQuery's delegated ones on
+   *      the same or child elements).
+   *   2. When a card-header click is detected in the capture phase, read
+   *      the card's current 'active' state — at this moment ElementsKit
+   *      has NOT yet toggled it.
+   *   3. Call stopImmediatePropagation() so ElementsKit's handler never
+   *      runs at all, giving us full control.
+   *   4. Apply the correct open/close logic ourselves.
+   */
+  (function () {
+    document.querySelectorAll('.elementskit-accordion').forEach(function (accordion) {
+      accordion.addEventListener('click', function (e) {
+        // Only act when a card-header anchor (or a child of one) is clicked.
+        var toggler = e.target.closest('.elementskit-card-header a[data-target]');
+        if (!toggler) return;
 
-      var card     = toggler.closest('.elementskit-card');
-      var accordion = toggler.closest('.elementskit-accordion');
-      var targetId = toggler.getAttribute('data-target').replace('#', '');
-      var target   = document.getElementById(targetId);
-      var isOpen   = card.classList.contains('active');
+        // Stop the event here — prevents ElementsKit's jQuery handler from
+        // seeing it and pre-toggling 'active' on the card.
+        e.preventDefault();
+        e.stopImmediatePropagation();
 
-      // Cerrar todos en el mismo acordeón
-      accordion.querySelectorAll('.elementskit-card').forEach(function (c) {
-        c.classList.remove('active');
-        var col = c.querySelector('.collapse');
-        if (col) col.classList.remove('show');
-        var tog = c.querySelector('.ekit-accordion--toggler');
-        if (tog) { tog.classList.add('collapsed'); tog.setAttribute('aria-expanded', 'false'); }
-      });
+        var card      = toggler.closest('.elementskit-card');
+        var targetId  = toggler.getAttribute('data-target').replace('#', '');
+        var target    = document.getElementById(targetId);
 
-      // Abrir el clickeado (si estaba cerrado)
-      if (!isOpen) {
-        card.classList.add('active');
-        if (target) target.classList.add('show');
-        toggler.classList.remove('collapsed');
-        toggler.setAttribute('aria-expanded', 'true');
-      }
+        // Read state NOW, before anything else has a chance to mutate it.
+        var isOpen = card.classList.contains('active');
+
+        // Close every card in this accordion.
+        accordion.querySelectorAll('.elementskit-card').forEach(function (c) {
+          c.classList.remove('active');
+          var col = c.querySelector('.collapse');
+          if (col) col.classList.remove('show');
+          var tog = c.querySelector('.ekit-accordion--toggler');
+          if (tog) {
+            tog.classList.add('collapsed');
+            tog.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Open the clicked card only if it was previously closed.
+        if (!isOpen) {
+          card.classList.add('active');
+          if (target) target.classList.add('show');
+          toggler.classList.remove('collapsed');
+          toggler.setAttribute('aria-expanded', 'true');
+        }
+      }, true /* useCapture — fires before ALL bubbling handlers */);
     });
-  });
+  }());
  </script>
  </body>
 </html>
