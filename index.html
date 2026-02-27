@@ -2733,5 +2733,51 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
     });
   }());
  </script>
+ <div class="whatsapp-chip">
+  <a href="https://wa.me/5491173616189?text=Hola%2C%20me%20interesa%20mejorar%20mi%20reputaci%C3%B3n%20online%20con%20rese%C3%B1as%20positivas" rel="noopener noreferrer" target="_blank">
+   <img alt="WhatsApp" class="whatsapp-icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"/>
+   <span>
+    ¿Querés mejorar tu reputación online?
+    <strong>
+     Chateá con nosotros
+    </strong>
+   </span>
+  </a>
+ </div>
+ <style>
+  .whatsapp-chip {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   background-color: #25D366;
+   color: white;
+   padding: 12px 20px;
+   border-radius: 50px;
+   font-size: 15px;
+   font-family: 'Inter', sans-serif;
+   font-weight: 500;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+   transition: background-color 0.3s ease, transform 0.2s ease;
+   z-index: 9999;
+ }
+
+ .whatsapp-chip a {
+   text-decoration: none;
+   color: white;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+ }
+
+ .whatsapp-chip:hover {
+   background-color: #1ebe5b;
+   transform: scale(1.05);
+ }
+
+ .whatsapp-chip .whatsapp-icon {
+   width: 22px;
+   height: 22px;
+ }
+ </style>
  </body>
 </html>
