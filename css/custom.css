@@ -1,0 +1,718 @@
+/* ============================================
+   DataTrackers — Medano Design Override
+   ============================================ */
+
+/* ─── Variables ─────────────────────────────── */
+:root {
+  --dt-navy:       #01011e;
+  --dt-navy-mid:   #060621;
+  --dt-navy-light: #0d0d3a;
+  --dt-blue:       #3898ec;
+  --dt-cyan:       #0dd3ff;
+  --dt-green:      #38d996;
+  --dt-lime:       #b8ff57;
+  --dt-white:      #ffffff;
+  --dt-text-muted: #a0aec0;
+  --dt-border:     rgba(255,255,255,0.08);
+  --dt-radius:     14px;
+  --dt-shadow:     0 20px 60px rgba(0,0,0,0.35);
+  --dt-font:       'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+/* ─── Base ────────────────────────────────────── */
+body {
+  font-family: var(--dt-font) !important;
+  background-color: var(--dt-navy) !important;
+  color: var(--dt-white) !important;
+}
+
+/* ─── HEADER ─────────────────────────────────── */
+.site-header,
+.site-header.sticky-header {
+  background-color: rgba(1,1,30,0.92) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid var(--dt-border) !important;
+  box-shadow: none !important;
+}
+
+.site-header .elementor-element-7a71a895 {
+  background-color: transparent !important;
+}
+
+/* Nav links */
+.site-header .elementskit-nav-identity-panel a,
+.site-header .ekit-menu-nav-link,
+.site-header .elementor-nav-menu a,
+.site-header a {
+  color: rgba(255,255,255,0.85) !important;
+  transition: color 0.2s ease !important;
+}
+
+.site-header a:hover {
+  color: var(--dt-cyan) !important;
+}
+
+/* ─── HERO SECTION ───────────────────────────── */
+.hero-section,
+.elementor-element-3cdd765 {
+  background: linear-gradient(160deg, #02022a 0%, #01011e 50%, #050528 100%) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 85vh !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Canvas behind hero */
+#hero-canvas {
+  position: absolute !important;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+.hero-section .e-con-inner,
+.elementor-element-3cdd765 .e-con-inner {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Hero heading */
+.hero-section .ekit-heading--title,
+.hero-section .elementskit-section-title {
+  font-size: clamp(2.4rem, 5vw, 4rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  color: var(--dt-white) !important;
+  letter-spacing: -0.03em !important;
+}
+
+.hero-section .ekit-heading--title span span {
+  color: var(--dt-cyan) !important;
+}
+
+.hero-section .ekit-heading__description p {
+  font-size: 1.15rem !important;
+  color: var(--dt-text-muted) !important;
+  line-height: 1.7 !important;
+  max-width: 560px !important;
+}
+
+/* Hero icon list */
+.hero-section .elementor-icon-list-text {
+  color: rgba(255,255,255,0.75) !important;
+  font-size: 0.9rem !important;
+}
+
+.hero-section .elementor-icon-list-icon i {
+  color: var(--dt-green) !important;
+}
+
+/* ─── PRIMARY BUTTONS ────────────────────────── */
+.elementskit-btn,
+a.elementskit-btn {
+  background: linear-gradient(135deg, var(--dt-green) 0%, var(--dt-cyan) 100%) !important;
+  color: var(--dt-navy) !important;
+  font-weight: 700 !important;
+  font-family: var(--dt-font) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 14px 32px !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.01em !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 20px rgba(56,217,150,0.35) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+}
+
+.elementskit-btn:hover,
+a.elementskit-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 30px rgba(56,217,150,0.5) !important;
+  color: var(--dt-navy) !important;
+}
+
+/* Outline/secondary buttons */
+.elementskit-btn.btn-bordered,
+a.elementskit-btn.btn-bordered {
+  background: transparent !important;
+  border: 2px solid var(--dt-cyan) !important;
+  color: var(--dt-cyan) !important;
+  box-shadow: none !important;
+}
+
+.elementskit-btn.btn-bordered:hover {
+  background: var(--dt-cyan) !important;
+  color: var(--dt-navy) !important;
+}
+
+/* ─── SECTION BACKGROUNDS ────────────────────── */
+
+/* Features section (light) */
+.elementor-element-6122484 {
+  background-color: #f8fafb !important;
+}
+.elementor-element-6122484 .ekit-heading--title,
+.elementor-element-6122484 .elementskit-section-title {
+  color: #0d0d3a !important;
+}
+.elementor-element-6122484 .elementskit-section-subtitle {
+  color: var(--dt-blue) !important;
+}
+.elementor-element-6122484 .ekit-heading__description p {
+  color: #4a5568 !important;
+}
+.elementor-element-6122484 .elementskit-info-box-title {
+  color: #1a202c !important;
+}
+.elementor-element-6122484 .elementskit-infobox p {
+  color: #4a5568 !important;
+}
+.elementor-element-6122484 .elementskit-info-box-icon i {
+  color: var(--dt-blue) !important;
+}
+.elementor-element-6122484 .ekit_global_links {
+  color: inherit !important;
+}
+
+/* Feature sections alternating dark */
+.elementor-element-3eb86f3d,
+.elementor-element-a3445,
+.elementor-element-ebd5100 {
+  background-color: var(--dt-navy-mid) !important;
+}
+
+.elementor-element-3eb86f3d .ekit-heading--title,
+.elementor-element-a3445 .ekit-heading--title,
+.elementor-element-ebd5100 .ekit-heading--title {
+  color: var(--dt-white) !important;
+}
+
+.elementor-element-3eb86f3d .elementskit-section-subtitle,
+.elementor-element-a3445 .elementskit-section-subtitle,
+.elementor-element-ebd5100 .elementskit-section-subtitle {
+  color: var(--dt-cyan) !important;
+}
+
+.elementor-element-3eb86f3d .ekit-heading__description p,
+.elementor-element-a3445 .ekit-heading__description p,
+.elementor-element-ebd5100 .ekit-heading__description p {
+  color: var(--dt-text-muted) !important;
+}
+
+/* Check icons on dark sections */
+.elementor-element-3eb86f3d .elementor-icon-list-icon i,
+.elementor-element-a3445 .elementor-icon-list-icon i,
+.elementor-element-ebd5100 .elementor-icon-list-icon i {
+  color: var(--dt-green) !important;
+}
+
+.elementor-element-3eb86f3d .elementor-icon-list-text,
+.elementor-element-a3445 .elementor-icon-list-text,
+.elementor-element-ebd5100 .elementor-icon-list-text {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+/* ─── ANALYTICS / TABS SECTION ───────────────── */
+.elementor-element-45b56a3 {
+  background-color: var(--dt-navy-light) !important;
+}
+
+.elementor-element-45b56a3 .elementskit-tab-nav .nav-link,
+.elementor-element-45b56a3 .ekit-tab-nav .nav-link {
+  color: rgba(255,255,255,0.6) !important;
+  border-color: rgba(255,255,255,0.15) !important;
+  background: transparent !important;
+}
+
+.elementor-element-45b56a3 .elementskit-tab-nav .nav-link.active,
+.elementor-element-45b56a3 .elementskit-tab-nav .nav-link:hover {
+  color: var(--dt-white) !important;
+  border-color: var(--dt-cyan) !important;
+  background: rgba(13,211,255,0.1) !important;
+}
+
+/* ─── PRICING SECTION ────────────────────────── */
+.elementor-element-560dd785,
+.elementor-element-4bf56f7d {
+  background-color: #060621 !important;
+}
+
+.elementskit-single-pricing {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid var(--dt-border) !important;
+  border-radius: var(--dt-radius) !important;
+  transition: transform 0.25s ease, border-color 0.25s ease !important;
+}
+
+.elementskit-single-pricing:hover {
+  transform: translateY(-4px) !important;
+  border-color: var(--dt-green) !important;
+  background: rgba(56,217,150,0.05) !important;
+}
+
+.elementskit-single-pricing .pricing-title,
+.elementskit-single-pricing .elementskit-pricing-title {
+  color: var(--dt-white) !important;
+}
+
+.elementskit-single-pricing .elementskit-price-tag,
+.elementskit-single-pricing .pricing-price {
+  color: var(--dt-cyan) !important;
+}
+
+.elementskit-single-pricing .elementskit-pricing-feature-list li {
+  color: rgba(255,255,255,0.75) !important;
+  border-color: var(--dt-border) !important;
+}
+
+.elementskit-single-pricing .elementskit-pricing-feature-list .yes i {
+  color: var(--dt-green) !important;
+}
+
+/* Pricing toggle */
+.elementkit-toggle-tab-wraper .elemenetskit-toggle-controls-wraper {
+  background: rgba(255,255,255,0.08) !important;
+  border-radius: 50px !important;
+}
+
+.elementkit-toggle-tab-wraper .elementskit-toggle-nav-link {
+  color: rgba(255,255,255,0.6) !important;
+}
+
+.elementkit-toggle-tab-wraper .elementskit-toggle-nav-link.active {
+  color: var(--dt-navy) !important;
+  background: var(--dt-green) !important;
+  border-radius: 50px !important;
+}
+
+.elementskit-section-subtitle {
+  color: var(--dt-cyan) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  font-size: 0.8rem !important;
+}
+
+/* Pricing headings */
+.elementor-element-560dd785 .ekit-heading--title,
+.elementor-element-4bf56f7d .ekit-heading--title {
+  color: var(--dt-white) !important;
+}
+
+.elementor-element-560dd785 .ekit-heading__description p,
+.elementor-element-4bf56f7d .ekit-heading__description p {
+  color: var(--dt-text-muted) !important;
+}
+
+/* ─── FAQ SECTION ────────────────────────────── */
+.elementor-widget-elementskit-accordion {
+  --faq-bg: rgba(255,255,255,0.04);
+}
+
+.elementskit-accordion .card {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid var(--dt-border) !important;
+  border-radius: var(--dt-radius) !important;
+  margin-bottom: 10px !important;
+}
+
+.elementskit-accordion .card-header {
+  background: transparent !important;
+  border-bottom: 1px solid var(--dt-border) !important;
+}
+
+.elementskit-accordion .card-header a,
+.elementskit-accordion .ekit-accordion-title-text {
+  color: var(--dt-white) !important;
+  font-weight: 600 !important;
+}
+
+.elementskit-accordion .card-body,
+.elementskit-accordion .ekit-accordion-content {
+  color: var(--dt-text-muted) !important;
+}
+
+.elementskit-accordion .card-header .ekit-accordion-icon i {
+  color: var(--dt-cyan) !important;
+}
+
+/* ─── FINAL CTA SECTION ──────────────────────── */
+.elementor-element-4827ecac {
+  background: linear-gradient(135deg, #060621 0%, #0d2a1a 100%) !important;
+  border-top: 1px solid var(--dt-border) !important;
+}
+
+.elementor-element-4827ecac .ekit-heading--title {
+  color: var(--dt-white) !important;
+}
+
+.elementor-element-4827ecac .ekit-heading__description p {
+  color: var(--dt-text-muted) !important;
+}
+
+/* ─── FOOTER ─────────────────────────────────── */
+.site-footer,
+.site-footer * {
+  --footer-bg: #01011a;
+}
+
+.site-footer {
+  background-color: #01011a !important;
+  border-top: 1px solid var(--dt-border) !important;
+}
+
+.site-footer .elementor-element-7a71a895,
+.elementor-24 .e-con {
+  background-color: transparent !important;
+}
+
+.site-footer a,
+.site-footer p,
+.site-footer span,
+.site-footer li {
+  color: rgba(255,255,255,0.55) !important;
+}
+
+.site-footer a:hover {
+  color: var(--dt-cyan) !important;
+}
+
+.site-footer .widget-title,
+.site-footer h3,
+.site-footer h4 {
+  color: var(--dt-white) !important;
+}
+
+/* ─── GLOBAL TYPOGRAPHY ──────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--dt-font) !important;
+}
+
+.ekit-heading--title span span {
+  background: linear-gradient(90deg, var(--dt-cyan), var(--dt-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── CARDS / INFO BOXES ─────────────────────── */
+.elementskit-infobox {
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid var(--dt-border) !important;
+  border-radius: var(--dt-radius) !important;
+  padding: 28px !important;
+  transition: border-color 0.25s, transform 0.25s !important;
+}
+
+.elementskit-infobox:hover {
+  border-color: rgba(56,217,150,0.4) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* Override infoboxes inside white section */
+.elementor-element-6122484 .elementskit-infobox {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06) !important;
+}
+
+.elementor-element-6122484 .elementskit-infobox:hover {
+  border-color: var(--dt-blue) !important;
+  box-shadow: 0 8px 30px rgba(56,152,236,0.15) !important;
+}
+
+/* ─── IMAGES ─────────────────────────────────── */
+.elementor-widget-image img {
+  border-radius: var(--dt-radius) !important;
+  box-shadow: var(--dt-shadow) !important;
+}
+
+/* ─── SCROLLBAR ──────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dt-navy); }
+::-webkit-scrollbar-thumb {
+  background: rgba(56,217,150,0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dt-green);
+}
+
+/* ─── HERO CANVAS GLOW ───────────────────────── */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 120px;
+  background: radial-gradient(ellipse, rgba(56,217,150,0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── MOBILE ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 70vh !important;
+  }
+
+  .hero-section .ekit-heading--title {
+    font-size: 2rem !important;
+  }
+
+  .elementskit-btn {
+    padding: 12px 24px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* ─── FIXES: ELEMENTOR-INVISIBLE ────────────────
+   Without Elementor's JS animation engine, 80 elements
+   stay permanently hidden. Make them all visible. */
+.elementor-invisible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+/* ─── FIXES: HERO TEXT COLORS ────────────────── */
+.hero-section .elementskit-section-title,
+.hero-section .ekit-heading--title,
+.hero-section h1,
+.hero-section h2 {
+  color: #ffffff !important;
+}
+
+.hero-section .ekit-heading__description p,
+.hero-section p {
+  color: rgba(255,255,255,0.8) !important;
+}
+
+/* ─── FIXES: HERO CANVAS Z-INDEX ─────────────── */
+#hero-canvas {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+.hero-section .e-con-inner {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* ─── FIXES: FOOTER WHITE → DARK ─────────────── */
+.elementor-element-46391da4,
+.elementor-element-4a042f97,
+.site-footer .e-con,
+.site-footer .e-con-inner,
+.site-footer [class*="elementor-element"] {
+  background-color: transparent !important;
+  border-color: var(--dt-border) !important;
+}
+
+/* Footer text contrast */
+.site-footer .elementor-heading-title {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+/* ─── FIXES: HEADER BACKGROUND ───────────────── */
+/* post-23.css sets it to #000000 — keep it but make it match our navy */
+.elementor-element-7a71a895 {
+  background-color: rgba(1,1,30,0.95) !important;
+}
+
+/* ─── FIXES: ACCORDION — JS-powered, closed by default ── */
+/* Hide all panels initially */
+.elementskit-accordion .collapse,
+.elementskit-card .collapse {
+  display: none !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+.elementskit-accordion .collapse.show {
+  display: block !important;
+  height: auto !important;
+}
+
+/* Chevron icon — always show down, rotate when open */
+.ekit_accordion_active_icon { display: none !important; }
+.ekit_accordion_normal_icon { display: flex !important; align-items: center; }
+
+.ekit_accordion_normal_icon .fas {
+  transition: transform 0.25s ease !important;
+  color: var(--dt-cyan) !important;
+  font-size: 0.85rem !important;
+}
+
+.elementskit-btn-link:not(.collapsed) .ekit_accordion_normal_icon .fas {
+  transform: rotate(180deg) !important;
+}
+
+/* Header hover */
+.elementskit-card-header a {
+  cursor: pointer !important;
+}
+
+/* ─── FIXES: TABS (show first tab content) ───── */
+.elementkit-tab-content-wraper .tab-pane {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* ─── FIXES: GENERAL DARK SECTION TEXT ───────── */
+/* Any section with dark background that has black text override */
+.elementor-element-3eb86f3d,
+.elementor-element-3eb86f3d *,
+.elementor-element-a3445 *,
+.elementor-element-ebd5100 * {
+  color: inherit;
+}
+
+.elementor-element-3eb86f3d p:not([class*="elementskit"]),
+.elementor-element-a3445 p:not([class*="elementskit"]),
+.elementor-element-ebd5100 p:not([class*="elementskit"]) {
+  color: rgba(255,255,255,0.75) !important;
+}
+
+/* ─── FIXES: NEGATIVE MARGIN OVERLAP ─────────── */
+/* Remove the -190px bottom margin that was causing hero/features overlap */
+.elementor-element-1623ae9 {
+  margin-bottom: 0 !important;
+}
+
+/* ─── FIXES: IMAGE LAZY-LOADED SIZING ────────── */
+img[loading="lazy"] {
+  display: block;
+}
+
+/* ─── FIXES: GLOBAL LINK COLORS ON DARK BG ───── */
+.elementor-element-3eb86f3d a.ekit_global_links,
+.elementor-element-a3445 a.ekit_global_links,
+.elementor-element-ebd5100 a.ekit_global_links {
+  color: inherit !important;
+}
+
+/* ─── FIXES: TABS SECTION HEADING COLORS ─────── */
+.elementor-element-45b56a3 .ekit-heading--title,
+.elementor-element-45b56a3 h2,
+.elementor-element-45b56a3 h3 {
+  color: var(--dt-white) !important;
+}
+
+.elementor-element-45b56a3 p {
+  color: var(--dt-text-muted) !important;
+}
+
+/* ─── FIXES: PRICING HEADING COLORS ──────────── */
+.elementskit-single-pricing .elementskit-pricing-title,
+.elementskit-single-pricing .elementskit-pricing-subtitle,
+.elementskit-single-pricing .elemenetskit-pricing-amount {
+  color: var(--dt-white) !important;
+}
+
+/* ─── FIXES: PREVENT OVERFLOW ON SECTIONS ────── */
+.e-con-boxed {
+  overflow: hidden;
+}
+
+.hero-section.e-con-boxed {
+  overflow: hidden !important;
+}
+
+/* ─── FIX: STYLISH LIST TEXT — dark on light, white on dark ─ */
+/* Light section (features): dark text */
+.elementor-element-6122484 .ekit-stylish-list-content-title {
+  color: #1a202c !important;
+}
+.elementor-element-6122484 .ekit-stylish-list-content-icon i {
+  color: var(--dt-blue) !important;
+}
+
+/* Dark sections: white text */
+.elementor-element-3eb86f3d .ekit-stylish-list-content-title,
+.elementor-element-a3445 .ekit-stylish-list-content-title,
+.elementor-element-ebd5100 .ekit-stylish-list-content-title {
+  color: #ffffff !important;
+}
+.elementor-element-3eb86f3d .ekit-stylish-list-content-icon i,
+.elementor-element-a3445 .ekit-stylish-list-content-icon i,
+.elementor-element-ebd5100 .ekit-stylish-list-content-icon i {
+  color: var(--dt-green) !important;
+}
+
+/* ─── FIX: HERO ICON LIST BULLETS → CHECKMARKS ─ */
+/* Replace dot bullets with check icons in all lists in dark sections */
+.hero-section .elementor-icon-list-icon i,
+.elementor-element-3eb86f3d .elementor-icon-list-icon i,
+.elementor-element-a3445 .elementor-icon-list-icon i,
+.elementor-element-ebd5100 .elementor-icon-list-icon i {
+  color: var(--dt-green) !important;
+  font-size: 1rem !important;
+}
+
+/* Style unordered lists that use plain bullets → use checkmark style */
+.hero-section ul:not([class]) li::marker,
+.e-con ul:not([class]) li::marker {
+  content: "✓  ";
+  color: var(--dt-green);
+}
+
+/* ─── FIX: LOGO DUPLICATION ON SCROLL ────────── */
+/* Without WP sticky JS, both primary & secondary logos show.
+   Header is always dark, so keep only the primary (white) logo. */
+.site-header .secondary-logo {
+  display: none !important;
+}
+
+/* Also prevent duplicate logo in the sticky state */
+.site-header.sticky-header .secondary-logo {
+  display: none !important;
+}
+
+.site-header .primary-logo {
+  display: inline-flex !important;
+}
+
+/* ─── MOBILE: Ocultar menú lateral (offcanvas) ─── */
+.elementor-element-2d5125ce {
+  display: none !important;
+}
+
+/* ─── MOBILE: "Iniciar sesión" bajo el botón hero ─── */
+.dt-iniciar-sesion-mobile {
+  display: none;
+  margin-top: 14px;
+  text-align: center;
+}
+
+.dt-iniciar-sesion-mobile a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  font-family: var(--dt-font);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.dt-iniciar-sesion-mobile a:hover {
+  color: var(--dt-cyan);
+}
+
+@media (max-width: 767px) {
+  .dt-iniciar-sesion-mobile {
+    display: block;
+  }
+}
