@@ -691,6 +691,13 @@ img[loading="lazy"] {
   display: inline-flex !important;
 }
 
+/* ─── FIX: PRIMARY LOGO ALWAYS VISIBLE ───────── */
+/* post-21646.css hides primary logo until .scrolled is added by JS.
+   We always show the primary (white) logo since header is always dark. */
+.site-logo-wrapper .primary-logo img {
+  opacity: 1 !important;
+}
+
 /* ─── MOBILE: Ocultar menú lateral (offcanvas) ─── */
 .elementor-element-2d5125ce {
   display: none !important;
