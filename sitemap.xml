@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://datatrackers.co/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://datatrackers.co/privacidad</loc><lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://datatrackers.co/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datatrackers.co/privacy"/></url>
+  <url><loc>https://datatrackers.co/privacy</loc><lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://datatrackers.co/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datatrackers.co/privacy"/></url>
+  <url><loc>https://datatrackers.co/terminos</loc><lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://datatrackers.co/terminos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datatrackers.co/terms"/></url>
+  <url><loc>https://datatrackers.co/terms</loc><lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://datatrackers.co/terminos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datatrackers.co/terms"/></url>
+</urlset>

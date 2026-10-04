@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="/css/custom.css" rel="stylesheet"/>
+  <script>
+   // Block WordPress API calls that don't exist in static mode
+   (function() {
+     var origFetch = window.fetch;
+     window.fetch = function(url) {
+       if (typeof url === 'string' && (
+         url.indexOf('datatrackers.co') > -1 ||
+         url.indexOf('wp-admin') > -1 ||
+         url.indexOf('wp-json') > -1 ||
+         url.indexOf('admin-ajax') > -1
+       )) {
+         return Promise.resolve(new Response('{}', {status: 200, headers: {'Content-Type': 'application/json'}}));
+       }
+       return origFetch.apply(this, arguments);
+     };
+     var origXHR = XMLHttpRequest.prototype.open;
+     XMLHttpRequest.prototype.open = function(method, url) {
+       if (typeof url === 'string' && (
+         url.indexOf('datatrackers.co') > -1 ||
+         url.indexOf('wp-admin') > -1 ||
+         url.indexOf('wp-json') > -1 ||
+         url.indexOf('admin-ajax') > -1
+       )) {
+         url = 'about:blank';
+       }
+       return origXHR.apply(this, arguments);
+     };
+   })();
+  </script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+   <!-- Optimización para motores de búsqueda de Rank Math -  https://rankmath.com/ -->
+   
+   <meta content="bizlOtIM45lnL9_bice7WlAcC_TF6czVgwVj0gnpDOU" name="google-site-verification"/>
+   <!-- /Plugin Rank Math WordPress SEO -->
+   
+   
+   
+   
+   <style id="wp-img-auto-sizes-contain-inline-css">
+    img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+   </style>
+   <link href="/css/frontend.min.css" id="elementor-frontend-css" media="all" rel="stylesheet"/>
+   <link href="/css/post-23.css" id="elementor-post-23-css" media="all" rel="stylesheet"/>
+   <link href="/css/post-24.css" id="elementor-post-24-css" media="all" rel="stylesheet"/>
+   <style id="wp-emoji-styles-inline-css">
+    img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+   </style>
+   
+   <link href="/css/styles.css" id="contact-form-7-css" media="all" rel="stylesheet"/>
+   <link href="/css/post-12.css" id="elementor-post-12-css" media="all" rel="stylesheet"/>
+   <link href="/css/style.css" id="cotton-css" media="all" rel="stylesheet"/>
+   <link href="/css/fadeIn.min.css" id="e-animation-fadeIn-css" media="all" rel="stylesheet"/>
+   <link href="/css/e-animation-pulse.min.css" id="e-animation-pulse-css" media="all" rel="stylesheet"/>
+   <link href="/css/widget-icon-list.min.css" id="widget-icon-list-css" media="all" rel="stylesheet"/>
+   <link href="/css/fadeInUp.min.css" id="e-animation-fadeInUp-css" media="all" rel="stylesheet"/>
+   <link href="/css/widget-image.min.css" id="widget-image-css" media="all" rel="stylesheet"/>
+   <link href="/css/fadeInDown.min.css" id="e-animation-fadeInDown-css" media="all" rel="stylesheet"/>
+   <link href="/css/post-21646.css" id="elementor-post-21646-css" media="all" rel="stylesheet"/>
+   
+   <link href="/css/font-awesome.min.css" id="font-awesome-min-css" media="all" rel="stylesheet"/>
+   <link href="/css/styles_1.css" id="edd-recurring-css" media="all" rel="stylesheet"/>
+   <link href="/css/variables.css" id="sierra-variables-css" media="all" rel="stylesheet"/>
+   <link href="/css/global.css" id="sierra-global-css" media="all" rel="stylesheet"/>
+   <link href="/css/style_1.css" id="elementskit-parallax-style-css" media="all" rel="stylesheet"/>
+   <link href="/css/widget-styles.css" id="ekit-widget-styles-css" media="all" rel="stylesheet"/>
+   <link href="/css/widget-styles-pro.css" id="ekit-widget-styles-pro-css" media="all" rel="stylesheet"/>
+   <link href="/css/responsive.css" id="ekit-responsive-css" media="all" rel="stylesheet"/>
+   <link href="/css/keydesign-framework.css" id="keydesign-frontend-css" media="all" rel="stylesheet"/>
+   <style id="keydesign-frontend-inline-css">
+    body {}
+/*# sourceURL=keydesign-frontend-inline-css */
+   </style>
+   <link href="/css/keydesign-woocommerce.css" id="keydesign-woocommerce-css" media="all" rel="stylesheet"/>
+   <link href="/css/plusjakartasans.css" id="elementor-gf-local-plusjakartasans-css" media="all" rel="stylesheet"/>
+   <link href="/css/inter.css" id="elementor-gf-local-inter-css" media="all" rel="stylesheet"/>
+   <link href="/css/ekiticons.css" id="elementor-icons-ekiticons-css" media="all" rel="stylesheet"/>
+   <link href="/css/fontawesome.min.css" id="elementor-icons-shared-0-css" media="all" rel="stylesheet"/>
+   <link href="/css/brands.min.css" id="elementor-icons-fa-brands-css" media="all" rel="stylesheet"/>
+   <link href="/css/regular.min.css" id="elementor-icons-fa-regular-css" media="all" rel="stylesheet"/>
+   <link href="/css/solid.min.css" id="elementor-icons-fa-solid-css" media="all" rel="stylesheet"/>
+   <script id="jquery-core-js" src="/js/jquery.min.js">
+   </script>
+   <script id="jquery-migrate-js" src="/js/jquery-migrate.min.js">
+   </script>
+   <script id="keydesign-go-top-js" src="/js/back-to-top.js">
+   </script>
+   <script id="keydesign-smooth-scroll-js" src="/js/smooth-scroll.js">
+   </script>
+   <script id="jarallax-js" src="/js/jarallax.js">
+   </script>
+   
+   
+   
+   <meta content="WordPress 6.9.1" name="generator"/>
+   <meta content="Easy Digital Downloads v3.2.6" name="generator"/>
+   <script type="text/javascript">
+    var stm_wpcfto_ajaxurl = '';
+   </script>
+   <style>
+    .vue_is_disabled {
+			display: none;
+		}
+   </style>
+   <script>
+    var stm_wpcfto_nonces = {"wpcfto_save_settings":"8530997dc5","get_image_url":"35e87b29eb","wpcfto_upload_file":"f9c2a3c127","wpcfto_search_posts":"6a870f9f1c"};
+   </script>
+   <meta content="Elementor 3.29.1; features: additional_custom_breakpoints, e_local_google_fonts; settings: css_print_method-external, google_font-enabled, font_display-swap" name="generator"/>
+   <script type="text/javascript">
+    var elementskit_module_parallax_url = "https://www.datatrackers.co/wp-content/plugins/elementskit/modules/parallax/"
+   </script>
+   <style>
+    .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+   </style>
+   <link href="/images/cropped-favicon-32x32.png" rel="icon" sizes="32x32"/>
+   <link href="/images/cropped-favicon-192x192.png" rel="icon" sizes="192x192"/>
+   <link href="/images/cropped-favicon-180x180.png" rel="apple-touch-icon"/>
+   <meta content="/images/cropped-favicon-270x270.png" name="msapplication-TileImage">
+    <style id="wp-custom-css">
+     /* Contenedor principal que agrupa el sidebar y el contenido */
+.sidebar-container {
+    display: flex;
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos la altura de la ventana */
+    background-color: #fff; /* Color de fondo para el área sin contenido */
+}
+
+/* Estilos del sidebar */
+#sidebar {
+    width: 250px;
+    background-color: #fff; /* Fondo blanco para el sidebar */
+    padding: 20px;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+    border-right: 1px solid #ddd; /* Línea de separación entre el menú y el contenido */
+    position: fixed; /* Fija el sidebar */
+    height: 100vh; /* Asegura que el sidebar ocupe toda la altura de la ventana */
+    overflow-y: auto; /* Permite el scroll interno si el contenido es más alto que la ventana */
+}
+
+/* Encabezado del sidebar */
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos del logo */
+.sidebar-header img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos de la lista de menús */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+/* Estilos de los elementos del menú */
+.sidebar-menu li {
+    margin-bottom: 15px; /* Añade espacio entre los elementos del menú */
+}
+
+/* Estilos de los enlaces del menú */
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: flex; /* Utiliza flexbox para alinear icono y texto */
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Espacio entre el icono y el texto */
+.sidebar-menu li a .icon {
+    margin-right: 10px;
+}
+
+/* Estilos del enlace al pasar el ratón */
+.sidebar-menu li a:hover {
+    background-color: #ddd; /* Color de fondo al pasar el ratón */
+}
+
+/* Botón para abrir ticket */
+.open-ticket-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 20px; /* Añade espacio superior al botón */
+}
+
+/* Estilos del botón al pasar el ratón */
+.open-ticket-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos del contenido principal */
+.main-content {
+    flex-grow: 1; /* Permite que el contenido principal ocupe el espacio restante */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff; /* Color de fondo del contenido principal */
+    margin-left: 270px; /* Añade espacio a la izquierda del contenido principal */
+    margin-top: 0; /* Elimina margen superior */
+}
+
+/* Estilos del contenedor personalizado */
+.custom-box {
+    margin: 0 auto;
+    margin-top: 1rem !important;
+    width: 90%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: left;
+    position: relative;
+    -webkit-box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+    margin-bottom: 1.125rem;
+    box-shadow: 0 2px 5px 0 #f0f0f0;
+    border: 1px solid rgb(0 0 0 / 10%);
+}
+
+/* Estilos del título */
+.main-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Fondo del área sin contenido */
+body {
+    background-color: #fff; /* Cambia el fondo del área sin contenido a blanco */
+}
+
+/* Estilos de la tabla */
+#edd_user_history {
+    text-align: left;
+    width: 100%;
+    border-top: 0px solid #f0f0f0;
+    border-bottom: none;
+    font-size: 1rem !important;
+    border-collapse: collapse;
+}
+
+/* Estilos del encabezado de la tabla */
+#edd_user_history th {
+    background-color: #fff;
+    padding: 0px 0px;
+    border: none;
+    font-weight: bold;
+}
+
+/* Estilos de las filas de la tabla */
+#edd_user_history td {
+    padding: 0px 0px;
+    border: 0px solid #ddd;
+}
+
+/* Estilos de las filas alternadas de la tabla */
+#edd_user_history tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* Estilos de los enlaces en la tabla */
+#edd_user_history a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#edd_user_history a:hover {
+    text-decoration: underline;
+}
+
+/* Ocultar la columna del ID en la tabla */
+#edd_user_history th.edd_purchase_id,
+#edd_user_history td.edd_purchase_id {
+    display: none;
+}
+
+/* Estilos del título */
+.log-content-title {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1rem !important;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+.custom-box {
+	    align-items: unset;!important
+}
+
+.elementor-23 .elementor-element.elementor-element-7ee6062c img {
+    width: 200px!important;
+}
+
+.elementor-21124 .elementor-element.elementor-element-3ab4eed img {
+    pointer-events: all;
+    width: 190px!important;
+    border-radius: 0px 0px 0px 0px;
+}
+    </style>
+   </meta>
+  </meta>
+ <title>Términos de Uso | DataTrackers</title>
+  <meta name="description" content="Términos y condiciones de uso de la plataforma de gestión de reputación online DataTrackers."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://datatrackers.co/terminos"/>
+  <link rel="alternate" hreflang="es" href="https://datatrackers.co/terminos"/>
+  <link rel="alternate" hreflang="en" href="https://datatrackers.co/terms"/>
+  <link rel="alternate" hreflang="x-default" href="https://datatrackers.co/terms"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="DataTrackers"/>
+  <meta property="og:title" content="Términos de Uso | DataTrackers"/>
+  <meta property="og:description" content="Términos y condiciones de uso de la plataforma de gestión de reputación online DataTrackers."/>
+  <meta property="og:url" content="https://datatrackers.co/terminos"/>
+  <meta property="og:locale" content="es_AR"/>
+  <link href="/css/legal.css" rel="stylesheet"/>
+ </head>
+ <body class="dt-legal-page wp-singular page-template-default page page-id-21646 wp-theme-sierra flip-button-effect keydesign-elementor-library edd-test-mode edd-js-none elementor-default elementor-kit-12 elementor-page elementor-page-21646">
+  <style>
+   .edd-js-none .edd-has-js, .edd-js .edd-no-js, body.edd-js input.edd-no-js { display: none; }
+  </style>
+  
+  <div class="site" id="page">
+   <header class="site-header sticky-header show-on-scroll" id="site-header">
+    <div class="site-header-wrapper">
+     <div class="ekit-template-content-markup ekit-template-content-header ekit-template-content-theme-support">
+      <div class="elementor elementor-23" data-elementor-id="23" data-elementor-type="wp-post">
+       <div class="elementor-element elementor-element-7a71a895 e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="7a71a895" data-settings='{"background_background":"classic"}'>
+        <div class="e-con-inner">
+         <div class="elementor-element elementor-element-a38f52b e-flex e-con-boxed e-con e-child" data-element_type="container" data-id="a38f52b">
+          <div class="e-con-inner">
+           <div class="elementor-element elementor-element-7a15c633 e-con-full e-flex e-con e-child" data-element_type="container" data-id="7a15c633">
+            <div class="elementor-element elementor-element-7ee6062c elementor-widget elementor-widget-kd_site_logo" data-element_type="widget" data-id="7ee6062c" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="kd_site_logo.default">
+             <div class="elementor-widget-container">
+              <div class="site-logo-wrapper">
+               <a class="site-logo" href="https://www.datatrackers.co">
+                <span class="primary-logo">
+                 <img alt="logo blanco" loading="eager" fetchpriority="high" src="/images/logo-blanco-r7247po54tdx0aiz91b4zi7lmr59t3o102l1ztwfkg.png" title="logo blanco"/>
+                </span>
+                <span class="secondary-logo">
+                 <img alt="" class="attachment-large size-large wp-image-22497" fetchpriority="high" height="290" src="/images/logo-blanco.png" width="1021"/>
+                </span>
+               </a>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-3d1bcae0 e-con-full e-flex e-con e-child" data-element_type="container" data-id="3d1bcae0">
+            <div class="elementor-element elementor-element-5f433582 elementor-hidden-tablet elementor-hidden-mobile elementor-hidden-desktop elementor-widget elementor-widget-ekit-nav-menu" data-element_type="widget" data-id="5f433582" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="ekit-nav-menu.default">
+             <div class="elementor-widget-container">
+              <nav class="ekit-wid-con ekit_menu_responsive_tablet" data-hamburger-icon="" data-hamburger-icon-type="icon" data-responsive-breakpoint="1024">
+               <button aria-label="hamburger-icon" class="elementskit-menu-hamburger elementskit-menu-toggler" type="button">
+                <span class="elementskit-menu-hamburger-icon">
+                </span>
+                <span class="elementskit-menu-hamburger-icon">
+                </span>
+                <span class="elementskit-menu-hamburger-icon">
+                </span>
+               </button>
+               <div class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover" id="ekit-megamenu-main-menu">
+                <ul class="elementskit-navbar-nav elementskit-menu-po-right submenu-click-on-" id="menu-main-menu">
+                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22413 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-22413">
+                  <a class="ekit-menu-nav-link" href="/#precios">
+                   Precios
+                  </a>
+                 </li>
+                </ul>
+                <div class="elementskit-nav-identity-panel">
+                 <button class="elementskit-menu-close elementskit-menu-toggler" type="button">
+                  X
+                 </button>
+                </div>
+               </div>
+               <div class="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay">
+               </div>
+              </nav>
+             </div>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-4c3368eb e-con-full e-flex e-con e-child" data-element_type="container" data-id="4c3368eb">
+            <div class="elementor-element elementor-element-5defaf2 elementor-hidden-tablet elementor-hidden-mobile elementor-align-center elementor-widget elementor-widget-elementskit-button" data-element_type="widget" data-id="5defaf2" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-button.default">
+             <div class="elementor-widget-container">
+              <div class="ekit-wid-con">
+               <div class="ekit-btn-wraper">
+                <a class="elementskit-btn whitespace--normal" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2i0iCAT2PidpUenqZLfQUtnBXPvttRlAUsLoNEIsGYog9JkaP1H04tOI2lOoMwaa5o8dJ7AKMG" id="" target="_blank">
+                 Agenda una Demo
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="elementor-element elementor-element-2d5125ce elementor-hidden-desktop ekit-off-canvas-position-right elementor-widget elementor-widget-elementskit-header-offcanvas" data-element_type="widget" data-id="2d5125ce" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-header-offcanvas.default">
+             <div class="elementor-widget-container">
+              <div class="ekit-wid-con">
+               <div class="ekit-offcanvas-toggle-wraper before">
+                <a aria-label="offcanvas-menu" class="ekit_navSidebar-button ekit_offcanvas-sidebar" href="#">
+                 <i aria-hidden="true" class="fas fa-bars">
+                 </i>
+                </a>
+               </div>
+               <!-- offset cart strart -->
+               <!-- sidebar cart item -->
+               <div class="ekit-sidebar-group info-group ekit-slide" data-settings='{"disable_bodyscroll":""}'>
+                <div class="ekit-overlay ekit-bg-black">
+                </div>
+                <div class="ekit-sidebar-widget">
+                 <div class="ekit_sidebar-widget-container">
+                  <div class="ekit_widget-heading before">
+                   <a aria-label="close-icon" class="ekit_close-side-widget" href="#">
+                    <i aria-hidden="true" class="fas fa-times">
+                    </i>
+                   </a>
+                  </div>
+                  <div class="ekit_sidebar-textwidget">
+                   <div class="widgetarea_warper widgetarea_warper_editable" data-elementskit-widgetarea-index="99" data-elementskit-widgetarea-key="03712dc">
+                    <div class="widgetarea_warper_edit" data-elementskit-widgetarea-index="99" data-elementskit-widgetarea-key="03712dc">
+                     <i aria-hidden="true" class="eicon-edit">
+                     </i>
+                     <span>
+                      Editar el contenido
+                     </span>
+                    </div>
+                    <div class="ekit-widget-area-container">
+                     <div class="elementor elementor-21124" data-elementor-id="21124" data-elementor-type="wp-post">
+                      <div class="elementor-element elementor-element-62fb806 e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="62fb806">
+                       <div class="e-con-inner">
+                        <div class="elementor-element elementor-element-9201ae0 e-flex e-con-boxed e-con e-child" data-element_type="container" data-id="9201ae0">
+                         <div class="e-con-inner">
+                          <div class="elementor-element elementor-element-c6b1c46 e-con-full e-flex e-con e-child" data-element_type="container" data-id="c6b1c46">
+                           <div class="elementor-element elementor-element-3ab4eed elementor-widget elementor-widget-image" data-element_type="widget" data-id="3ab4eed" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="image.default">
+                            <div class="elementor-widget-container">
+                             <a href="#">
+                              <img alt="" class="attachment-1536x1536 size-1536x1536 wp-image-22498" height="290" sizes="(max-width: 1021px) 100vw, 1021px" src="/images/logo-principal.png" srcset="/images/logo-principal.png 1021w, /images/logo-principal-300x85.png 300w, /images/logo-principal-768x218.png 768w, /images/logo-principal-710x202.png 710w" width="1021"/>
+                             </a>
+                            </div>
+                           </div>
+                          </div>
+                          <div class="elementor-element elementor-element-5b487ff keydesign-h4 elementor-widget elementor-widget-elementskit-stylish-list" data-element_type="widget" data-id="5b487ff" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-stylish-list.default">
+                           <div class="elementor-widget-container">
+                            <div class="ekit-wid-con">
+                             <ul class="ekit-stylish-list">
+                              <li class="ekit-stylish-list-content-wrapper elementor-repeater-item-9176c3a">
+                               <a class="ekit-wrapper-link" href="https://app.datatrackers.co/login">
+                               </a>
+                               <div class="ekit-stylish-list-content">
+                                <div class="ekit-stylish-list-content-icon">
+                                 <i aria-hidden="true" class="fas fa-arrow-right">
+                                 </i>
+                                </div>
+                                <div class="ekit-stylish-list-content-text">
+                                 <span class="ekit-stylish-list-content-title">
+                                  Iniciar sesión
+                                 </span>
+                                 <span class="ekit-stylish-list-content-description">
+                                  Utilice su correo electrónico.
+                                 </span>
+                                </div>
+                               </div>
+                              </li>
+                              <li class="ekit-stylish-list-content-wrapper elementor-repeater-item-e2f9dd2">
+                               <a class="ekit-wrapper-link" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2i0iCAT2PidpUenqZLfQUtnBXPvttRlAUsLoNEIsGYog9JkaP1H04tOI2lOoMwaa5o8dJ7AKMG">
+                               </a>
+                               <div class="ekit-stylish-list-content">
+                                <div class="ekit-stylish-list-content-icon">
+                                 <i aria-hidden="true" class="fas fa-arrow-right">
+                                 </i>
+                                </div>
+                                <div class="ekit-stylish-list-content-text">
+                                 <span class="ekit-stylish-list-content-title">
+                                  Solicite una demo
+                                 </span>
+                                 <span class="ekit-stylish-list-content-description">
+                                  Hágalo con nuestro equipo.
+                                 </span>
+                                </div>
+                               </div>
+                              </li>
+                             </ul>
+                            </div>
+                           </div>
+                          </div>
+                          <div class="elementor-element elementor-element-1e4a9a4 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="1e4a9a4" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="divider.default">
+                           <div class="elementor-widget-container">
+                            <div class="elementor-divider">
+                             <span class="elementor-divider-separator">
+                             </span>
+                            </div>
+                           </div>
+                          </div>
+                         </div>
+                        </div>
+                        <div class="elementor-element elementor-element-8f0f569 e-flex e-con-boxed e-con e-child" data-element_type="container" data-id="8f0f569">
+                         <div class="e-con-inner">
+                          <div class="elementor-element elementor-element-2cb3fbf elementor-widget elementor-widget-elementskit-social-media" data-element_type="widget" data-id="2cb3fbf" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-social-media.default">
+                           <div class="elementor-widget-container">
+                            <div class="ekit-wid-con">
+                             <ul class="ekit_social_media">
+                              <li class="elementor-repeater-item-a4ff20c">
+                               <a aria-label="Instagram" class="instagram" href="https://www.instagram.com/datatrackers/">
+                                <i aria-hidden="true" class="fab fa-instagram">
+                                </i>
+                               </a>
+                              </li>
+                              <li class="elementor-repeater-item-e368d7c">
+                               <a aria-label="Instagram" class="in" href="https://www.linkedin.com/company/datatrackers-seo/">
+                                <i aria-hidden="true" class="fab fa-linkedin-in">
+                                </i>
+                               </a>
+                              </li>
+                             </ul>
+                            </div>
+                           </div>
+                          </div>
+                         </div>
+                        </div>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <!-- END sidebar widget item -->
+               <!-- END offset cart strart -->
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-d1a536a elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-ekit-nav-menu" data-element_type="widget" data-id="d1a536a" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="ekit-nav-menu.default">
+            <div class="elementor-widget-container">
+             <nav class="ekit-wid-con ekit_menu_responsive_tablet" data-hamburger-icon="" data-hamburger-icon-type="icon" data-responsive-breakpoint="1024">
+              <button aria-label="hamburger-icon" class="elementskit-menu-hamburger elementskit-menu-toggler" type="button">
+               <span class="elementskit-menu-hamburger-icon">
+               </span>
+               <span class="elementskit-menu-hamburger-icon">
+               </span>
+               <span class="elementskit-menu-hamburger-icon">
+               </span>
+              </button>
+              <div class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover" id="ekit-megamenu-main-menu-2">
+               <ul class="elementskit-navbar-nav elementskit-menu-po-right submenu-click-on-" id="menu-main-menu-2">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22349 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-22349">
+                 <a class="ekit-menu-nav-link" href="https://app.datatrackers.co/login">
+                  Iniciar sesión
+                 </a>
+                </li>
+               </ul>
+               <div class="elementskit-nav-identity-panel">
+                <button class="elementskit-menu-close elementskit-menu-toggler" type="button">
+                 X
+                </button>
+               </div>
+              </div>
+              <div class="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay">
+              </div>
+             </nav>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </header>
+   <div class="site-content" id="content">
+    <div class="content-area" id="primary">
+     <main class="site-main dt-legal" id="main" role="main">
+      <article class="dt-legal-article">
+       <header class="dt-legal-header">
+        <a class="dt-legal-lang" href="/terms" hreflang="en" lang="en">Read in English →</a>
+        <h1>Términos de Uso</h1>
+        <p class="dt-legal-updated">Última actualización: <time datetime="2026-10-04">4 de octubre de 2026</time></p>
+       </header>
+       <div class="dt-legal-body">
+<p class="dt-legal-lead">Estos Términos de Uso regulan el uso de la plataforma DataTrackers (app.datatrackers.co) y de este sitio web. Al acceder o usar DataTrackers, el cliente y sus usuarios aceptan estos términos.</p>
+
+<h2 id="quien-presta-el-servicio">1. Quién presta el servicio</h2>
+<p>El servicio es prestado por <strong>Data Trackers S.A.S.</strong> (CUIT 33-71657991-9), con domicilio en Av. Luis María Campos 1137, Ciudad Autónoma de Buenos Aires, Argentina ("DataTrackers"). "Cliente" es el negocio que contrata el servicio; "usuarios" son las personas que el cliente autoriza a usarlo.</p>
+
+<h2 id="descripcion-del-servicio">2. Descripción del servicio</h2>
+<p>DataTrackers es una plataforma de gestión de reputación online para negocios multi-locación. Centraliza las reseñas de Google de las locaciones del cliente; le permite responderlas a mano, con plantillas o con borradores generados por IA; envía pedidos de reseña a los clientes del negocio por email y WhatsApp; y genera reportes y alertas.</p>
+<p>Las condiciones comerciales (precio, plazo, facturación y alcance del plan) surgen de la propuesta o contrato firmado con cada cliente, que prevalece sobre estos términos en caso de conflicto.</p>
+
+<h2 id="cuentas-y-usuarios">3. Cuentas y usuarios</h2>
+<ul>
+  <li>El acceso es por invitación: DataTrackers o los administradores del cliente invitan a los usuarios a la cuenta.</li>
+  <li>El cliente es responsable de a quién invita, de los roles que asigna y de toda la actividad que se realice con las credenciales de sus usuarios.</li>
+  <li>Los usuarios deben mantener sus credenciales en reserva y avisar de inmediato a <a href="mailto:info@datatrackers.co">info@datatrackers.co</a> ante cualquier uso no autorizado.</li>
+</ul>
+
+<h2 id="obligaciones-del-cliente">4. Obligaciones del cliente</h2>
+<p>El cliente se compromete a:</p>
+<ul>
+  <li><strong>Contar con el consentimiento</strong> de sus propios clientes, y con cualquier otra base legal necesaria, antes de cargar sus datos de contacto y enviarles mensajes por email o WhatsApp.</li>
+  <li><strong>No ofrecer incentivos</strong> (descuentos, regalos, pagos u otros beneficios) a cambio de reseñas.</li>
+  <li><strong>No filtrar a quién se le pide una reseña según su nivel de satisfacción</strong> (review gating), por ejemplo pidiéndosela solo a los clientes que tuvieron una buena experiencia.</li>
+  <li><strong>Cumplir las políticas de Google y de WhatsApp</strong>, incluidas las políticas de Google sobre Perfil de Negocio y contenido generado por usuarios, y las Políticas de Business y de Comercio de WhatsApp.</li>
+  <li>No publicar contenido falso, ofensivo o ilícito, y usar el servicio conforme a la ley aplicable.</li>
+</ul>
+
+<h2 id="contenido-de-terceros">5. Contenido de terceros (Google)</h2>
+<p>Las reseñas, calificaciones y demás contenido que se muestra desde Google pertenecen a sus autores y a Google, y se rigen por los términos de Google. DataTrackers no crea, edita ni controla ese contenido, y no puede eliminar reseñas. El cliente es el único responsable de las respuestas que publica, incluidas las basadas en borradores generados por IA, que debe revisar antes de publicar.</p>
+
+<h2 id="conexion-con-google">6. Conexión y desconexión de Google</h2>
+<p>Para usar las funciones de Google, el cliente debe conectar su cuenta de Google mediante la pantalla de consentimiento de Google y autorizar el acceso a su Perfil de Negocio. Puede desconectarla en cualquier momento revocando el acceso desde <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">https://myaccount.google.com/permissions</a>. Al desconectarla, DataTrackers deja de sincronizar datos y borra los datos obtenidos de Google dentro de los 30 días, según lo descripto en la <a href="/privacidad">Política de Privacidad</a>.</p>
+
+<h2 id="disponibilidad">7. Disponibilidad del servicio</h2>
+<p>Hacemos esfuerzos razonables para que DataTrackers esté disponible y funcione correctamente, pero no garantizamos un servicio ininterrumpido ni libre de errores. El servicio depende de plataformas y APIs de terceros (como Google y Meta), cuyos cambios o interrupciones pueden afectar algunas funciones. Podemos realizar tareas de mantenimiento, que procuraremos programar para minimizar el impacto.</p>
+
+<h2 id="propiedad-intelectual">8. Propiedad intelectual</h2>
+<p>La plataforma, su software, diseño y marca pertenecen a DataTrackers o a sus licenciantes. El cliente recibe un derecho de uso no exclusivo e intransferible mientras su cuenta esté activa. El cliente conserva la titularidad de sus datos y le otorga a DataTrackers el permiso necesario para tratarlos únicamente con el fin de prestar el servicio.</p>
+
+<h2 id="limitacion-de-responsabilidad">9. Limitación de responsabilidad</h2>
+<p>En la medida permitida por la ley aplicable, DataTrackers no responde por daños indirectos o consecuentes, lucro cesante o pérdida de negocios, ni por el contenido de terceros o por los actos de plataformas de terceros. La responsabilidad total de DataTrackers por cualquier reclamo vinculado al servicio se limita a los montos pagados por el cliente en los doce (12) meses anteriores al hecho que lo origina.</p>
+
+<h2 id="suspension-y-baja">10. Suspensión y baja</h2>
+<p>DataTrackers puede suspender o dar de baja el acceso si el cliente incumple estos términos o las políticas de Google o WhatsApp, o si es necesario por razones de seguridad o legales, avisando previamente siempre que sea posible. El cliente puede pedir la baja de su cuenta en cualquier momento escribiendo a <a href="mailto:info@datatrackers.co">info@datatrackers.co</a>, sujeto a lo previsto en su acuerdo comercial. Con la baja, los datos se eliminan según lo descripto en la <a href="/privacidad">Política de Privacidad</a>.</p>
+
+<h2 id="ley-aplicable">11. Ley aplicable y jurisdicción</h2>
+<p>Estos términos se rigen por las leyes de la República Argentina. Cualquier controversia se someterá a los tribunales ordinarios de la Ciudad Autónoma de Buenos Aires, con renuncia a cualquier otro fuero o jurisdicción.</p>
+
+<h2 id="cambios">12. Cambios a los términos</h2>
+<p>Podemos actualizar estos términos. Publicaremos la nueva versión en esta página con su fecha y, si los cambios son relevantes, avisaremos a los clientes con anticipación por email o dentro de la plataforma. El uso del servicio después de esa fecha implica la aceptación de los nuevos términos.</p>
+
+<h2 id="contacto">13. Contacto</h2>
+<p>Data Trackers S.A.S. · Av. Luis María Campos 1137, Ciudad Autónoma de Buenos Aires, Argentina · <a href="mailto:info@datatrackers.co">info@datatrackers.co</a></p>
+
+       </div>
+      </article>
+     </main>
+    </div>
+   </div>
+   <!-- #content -->
+   <footer class="site-footer sticky-footer" id="site-footer" role="contentinfo">
+    <div class="ekit-template-content-markup ekit-template-content-footer ekit-template-content-theme-support">
+     <div class="elementor elementor-24" data-elementor-id="24" data-elementor-type="wp-post">
+      <div class="elementor-element elementor-element-46391da4 e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="46391da4" data-settings='{"background_background":"classic"}'>
+       <div class="e-con-inner">
+        <div class="elementor-element elementor-element-5fbe84a3 e-con-full e-flex e-con e-child" data-element_type="container" data-id="5fbe84a3">
+         <div class="elementor-element elementor-element-3704d06d e-con-full e-flex e-con e-child" data-element_type="container" data-id="3704d06d">
+          <div class="elementor-element elementor-element-290e22cd e-con-full e-flex e-con e-child" data-element_type="container" data-id="290e22cd">
+           <div class="elementor-element elementor-element-1dd4c2ae elementor-widget__width-initial elementor-widget elementor-widget-heading" data-element_type="widget" data-id="1dd4c2ae" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+             <p class="elementor-heading-title elementor-size-default">
+              DataTrackers te ofrece una solución completa para gestionar y optimizar la reputación de tu negocio a través de la administración centralizada de reseñas.
+             </p>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-element elementor-element-7d14e194 e-con-full e-flex e-con e-child" data-element_type="container" data-id="7d14e194">
+           <div class="elementor-element elementor-element-5c5eac0a elementor-widget elementor-widget-heading" data-element_type="widget" data-id="5c5eac0a" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+             <h5 class="elementor-heading-title elementor-size-default">
+              Recursos
+             </h5>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-165765d1 elementor-list-item-link-inline elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-element_type="widget" data-id="165765d1" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="icon-list.default">
+            <div class="elementor-widget-container">
+             <ul class="elementor-icon-list-items">
+              <li class="elementor-icon-list-item">
+               <a href="https://www.medano.co/notas" target="_blank">
+                <span class="elementor-icon-list-text">
+                 Blog
+                </span>
+               </a>
+              </li>
+             </ul>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-element elementor-element-19efba30 e-con-full e-flex e-con e-child" data-element_type="container" data-id="19efba30">
+           <div class="elementor-element elementor-element-301b09c2 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="301b09c2" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+             <h5 class="elementor-heading-title elementor-size-default">
+              Cuenta
+             </h5>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-1e79ec8a elementor-list-item-link-inline elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-element_type="widget" data-id="1e79ec8a" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="icon-list.default">
+            <div class="elementor-widget-container">
+             <ul class="elementor-icon-list-items">
+              <li class="elementor-icon-list-item">
+               <a href="https://app.datatrackers.co/">
+                <span class="elementor-icon-list-text">
+                 Iniciar sesión
+                </span>
+               </a>
+              </li>
+             </ul>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-element elementor-element-682db0e2 e-con-full e-flex e-con e-child" data-element_type="container" data-id="682db0e2">
+           <div class="elementor-element elementor-element-58d9cb8 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="58d9cb8" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+             <h5 class="elementor-heading-title elementor-size-default">
+              Compañía
+             </h5>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-5cfa74c5 elementor-list-item-link-inline elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-element_type="widget" data-id="5cfa74c5" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="icon-list.default">
+            <div class="elementor-widget-container">
+             <ul class="elementor-icon-list-items">
+              <li class="elementor-icon-list-item">
+               <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2i0iCAT2PidpUenqZLfQUtnBXPvttRlAUsLoNEIsGYog9JkaP1H04tOI2lOoMwaa5o8dJ7AKMG" target="_blank">
+                <span class="elementor-icon-list-text">
+                 Solicita una demo
+                </span>
+               </a>
+              </li>
+              <li class="elementor-icon-list-item">
+               <a href="mailto:info@datatrackers.co?subject=Consulta&amp;body=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20consulta." target="_blank">
+                <span class="elementor-icon-list-text">
+                 Contactar
+                </span>
+               </a>
+              </li>
+              <li class="elementor-icon-list-item">
+               <a href="https://www.linkedin.com/company/datatrackers-seo/" target="_blank">
+                <span class="elementor-icon-list-text">
+                 LinkedIn
+                </span>
+               </a>
+              </li>
+             </ul>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-element elementor-element-19efba30 e-con-full e-flex e-con e-child dt-footer-legal" data-element_type="container">
+           <div class="elementor-element elementor-element-301b09c2 elementor-widget elementor-widget-heading" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+             <h5 class="elementor-heading-title elementor-size-default">Legal</h5>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-1e79ec8a elementor-list-item-link-inline elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-element_type="widget" data-widget_type="icon-list.default">
+            <div class="elementor-widget-container">
+             <ul class="elementor-icon-list-items">
+              <li class="elementor-icon-list-item"><a href="/privacidad"><span class="elementor-icon-list-text">Política de privacidad</span></a></li>
+              <li class="elementor-icon-list-item"><a href="/terminos"><span class="elementor-icon-list-text">Términos de uso</span></a></li>
+              <li class="elementor-icon-list-item"><a href="/privacy" hreflang="en"><span class="elementor-icon-list-text">Privacy Policy</span></a></li>
+              <li class="elementor-icon-list-item"><a href="/terms" hreflang="en"><span class="elementor-icon-list-text">Terms of Service</span></a></li>
+             </ul>
+            </div>
+           </div>
+          </div>
+
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="elementor-element elementor-element-4a042f97 e-con-full e-flex e-con e-parent" data-element_type="container" data-id="4a042f97" data-settings='{"background_background":"classic"}'>
+       <div class="elementor-element elementor-element-1026afc2 e-flex e-con-boxed e-con e-child" data-element_type="container" data-id="1026afc2">
+        <div class="e-con-inner">
+         <div class="elementor-element elementor-element-1f499a1b e-con-full e-flex e-con e-child" data-element_type="container" data-id="1f499a1b">
+          <div class="elementor-element elementor-element-452fd6d elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="452fd6d" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="text-editor.default">
+           <div class="elementor-widget-container">
+            <p>
+             © 2026 Data Trackers S.A.S.
+            </p>
+            <p class="dt-footer-legal-links"><a href="/privacidad">Privacidad</a> · <a href="/terminos">Términos</a> · <a href="/privacy" hreflang="en">Privacy</a> · <a href="/terms" hreflang="en">Terms</a></p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <!-- #page -->
+  <div class="back-to-top right-aligned primary-color scroll-position-style">
+   <span class="icon-arrow-up">
+   </span>
+   <svg height="50" width="50">
+    <circle cx="25" cy="25" r="24">
+    </circle>
+   </svg>
+  </div>
+  
+  <script>
+   document.addEventListener("DOMContentLoaded", function() {
+        const tabs = document.querySelectorAll(".tabs a");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                tabs.forEach(item => item.classList.remove("active"));
+                tabContents.forEach(content => content.classList.remove("active"));
+
+                tab.classList.add("active");
+                document.querySelector(tab.getAttribute("href")).classList.add("active");
+            });
+        });
+
+        // Activar la primera pestaña por defecto
+        if (tabs.length > 0) {
+            tabs[0].classList.add("active");
+            tabContents[0].classList.add("active");
+        }
+    });
+  </script>
+  <script>
+   const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+  </script>
+  <script id="wp-hooks-js" src="/js/hooks.min.js">
+  </script>
+  <script id="wp-i18n-js" src="/js/i18n.min.js">
+  </script>
+  
+  <script id="swv-js" src="/js/index_1.js">
+  </script>
+  <script id="contact-form-7-js-translations">
+   ( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2025-04-10 13:48:55+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"es"},"This contact form is placed in the wrong place.":["Este formulario de contacto est\u00e1 situado en el lugar incorrecto."],"Error:":["Error:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+  </script>
+  <script id="contact-form-7-js-before">
+   var wpcf7 = {
+    "api": {
+        "root": "",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+//# sourceURL=contact-form-7-js-before
+  </script>
+  <script id="contact-form-7-js" src="/js/index.js">
+  </script>
+  <script id="elementor-webpack-runtime-js" src="/js/webpack.runtime.min.js">
+  </script>
+  <script id="elementor-frontend-modules-js" src="/js/frontend-modules.min.js">
+  </script>
+  <script id="jquery-ui-core-js" src="/js/core.min.js">
+  </script>
+  <script id="elementor-frontend-js-before">
+   var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartir en Facebook","shareOnTwitter":"Compartir en Twitter","pinIt":"Pinear","download":"Descargar","downloadImage":"Descargar imagen","fullscreen":"Pantalla completa","zoom":"Zoom","share":"Compartir","playVideo":"Reproducir v\u00eddeo","previous":"Anterior","next":"Siguiente","close":"Cerrar","a11yCarouselPrevSlideMessage":"Diapositiva anterior","a11yCarouselNextSlideMessage":"Diapositiva siguiente","a11yCarouselFirstSlideMessage":"Esta es la primera diapositiva","a11yCarouselLastSlideMessage":"Esta es la \u00faltima diapositiva","a11yCarouselPaginationBulletMessage":"Ir a la diapositiva"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"M\u00f3vil vertical","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"M\u00f3vil horizontal","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tableta vertical","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tableta horizontal","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Port\u00e1til","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Pantalla grande","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.29.1","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"container":true,"e_local_google_fonts":true,"nested-elements":true,"editor_v2":true,"home_screen":true,"cloud-library":true,"e_opt_in_v4_page":true},"urls":{"assets":"https:\/\/www.datatrackers.co\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"","uploadUrl":"https:\/\/www.datatrackers.co\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"b989736729"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":21646,"title":"DataTrackers%20%7C%20Software%20de%20Gesti%C3%B3n%20de%20Reputaci%C3%B3n%20Online","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+  </script>
+  <script id="elementor-frontend-js" src="/js/frontend.min.js">
+  </script>
+  
+  
+  <script id="sierra-scripts-js" src="/js/front-end.js">
+  </script>
+  <script id="elementskit-framework-js-frontend-js" src="/js/frontend-script.js">
+  </script>
+  <script id="elementskit-framework-js-frontend-js-after">
+   var elementskit = {
+			resturl: '',
+		}
+
+		
+//# sourceURL=elementskit-framework-js-frontend-js-after
+  </script>
+  <script id="ekit-widget-scripts-js" src="/js/widget-scripts.js">
+  </script>
+  <script id="animejs-js" src="/js/anime.js">
+  </script>
+  <script defer="" id="elementskit-parallax-frontend-defer-js" src="/js/parallax-frontend.js">
+  </script>
+  <script id="keydesign-scripts-js" src="/js/keydesign-framework.js">
+  </script>
+  <script id="animate-circle-js" src="/js/animate-circle.min.js">
+  </script>
+  <script id="elementskit-elementor-js-extra">
+   var ekit_config = {"ajaxurl":"","nonce":"2ed2e21a31"};
+//# sourceURL=elementskit-elementor-js-extra
+  </script>
+  <script id="elementskit-elementor-js" src="/js/elementor.js">
+  </script>
+  <script id="elementskit-elementor-pro-js" src="/js/elementor_1.js">
+  </script>
+  <script defer="" id="elementskit-sticky-content-script-init-defer-js" src="/js/elementskit-sticky-content.js">
+  </script>
+  
+  <script id="elementskit-wrapper-js" src="/js/wrapper.js">
+  </script>
+  <script id="cotton-js" src="/js/cotton.min.js">
+  </script>
+  <script id="mouse-cursor-js" src="/js/mouse-cursor-scripts.js">
+  </script>
+  
+  <script type="module">
+   /*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=js/wp-emoji-loader.min.js
+  </script>
+ <script>
+  /* ── Hero Canvas Particle Network (Medano style) ── */
+  (function () {
+    var canvas = document.getElementById('hero-canvas');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var W, H, particles = [], mouse = { x: -9999, y: -9999 };
+    var COLORS = ['rgba(56,217,150,', 'rgba(13,211,255,', 'rgba(56,152,236,'];
+    var N = 90, CONNECT = 130;
+
+    function resize() {
+      W = canvas.width = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    }
+
+    function Particle() {
+      this.x = Math.random() * W;
+      this.y = Math.random() * H;
+      this.vx = (Math.random() - 0.5) * 0.5;
+      this.vy = (Math.random() - 0.5) * 0.5;
+      this.r = Math.random() * 2 + 1;
+      this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+    }
+
+    Particle.prototype.update = function () {
+      this.x += this.vx;
+      this.y += this.vy;
+      if (this.x < 0 || this.x > W) this.vx *= -1;
+      if (this.y < 0 || this.y > H) this.vy *= -1;
+      var dx = mouse.x - this.x, dy = mouse.y - this.y;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 100) {
+        this.x -= dx * 0.02;
+        this.y -= dy * 0.02;
+      }
+    };
+
+    for (var i = 0; i < N; i++) particles.push(new Particle());
+    resize();
+    window.addEventListener('resize', function () { resize(); });
+
+    canvas.closest('.hero-section') && canvas.closest('.hero-section').addEventListener('mousemove', function (e) {
+      var rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+    canvas.closest('.hero-section') && canvas.closest('.hero-section').addEventListener('mouseleave', function () {
+      mouse.x = -9999; mouse.y = -9999;
+    });
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      for (var i = 0; i < N; i++) {
+        particles[i].update();
+        ctx.beginPath();
+        ctx.arc(particles[i].x, particles[i].y, particles[i].r, 0, Math.PI * 2);
+        ctx.fillStyle = particles[i].color + '0.7)';
+        ctx.fill();
+        for (var j = i + 1; j < N; j++) {
+          var dx = particles[i].x - particles[j].x;
+          var dy = particles[i].y - particles[j].y;
+          var d = Math.sqrt(dx * dx + dy * dy);
+          if (d < CONNECT) {
+            var alpha = (1 - d / CONNECT) * 0.35;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = particles[i].color + alpha + ')';
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+ </script>
+
+ <style>
+  /* Disable Elementor scroll animations */
+  .elementor-invisible { visibility: visible !important; opacity: 1 !important; }
+  .animated, .animated-fast { animation: none !important; }
+
+  /* FAQ styles */
+  .elementskit-card {
+    border-radius: 12px !important;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .elementskit-card-header {
+    border-radius: 12px !important;
+  }
+  /* Flecha en negro — override del var(--dt-cyan) de custom.css */
+  .ekit_accordion_normal_icon .fas,
+  .ekit_accordion_active_icon .fas {
+    color: #1a202c !important;
+  }
+ </style>
+
+ <script>
+  /* FAQ accordion — fixed for ElementsKit handler conflict.
+   *
+   * Root cause: elementor.js binds a jQuery delegated click handler on
+   * '.elementskit-card-header' that calls toggleClass('active') on the
+   * parent card.  Because jQuery's delegated handlers run during the
+   * bubbling phase in registration order, and elementor.js is loaded
+   * BEFORE this inline script, the ElementsKit handler fires first and
+   * toggles 'active' onto the card.  When our handler then reads
+   * card.classList.contains('active') the class is already present, so
+   * we think the item is open and immediately close it — requiring a
+   * second click to actually open it.
+   *
+   * Fix strategy — capture phase + snapshot-before-ElementsKit:
+   *   1. Use addEventListener with useCapture = true on each accordion
+   *      CONTAINER.  Capture-phase listeners fire top-down, before any
+   *      bubbling-phase listener (including jQuery's delegated ones on
+   *      the same or child elements).
+   *   2. When a card-header click is detected in the capture phase, read
+   *      the card's current 'active' state — at this moment ElementsKit
+   *      has NOT yet toggled it.
+   *   3. Call stopImmediatePropagation() so ElementsKit's handler never
+   *      runs at all, giving us full control.
+   *   4. Apply the correct open/close logic ourselves.
+   */
+  (function () {
+    document.querySelectorAll('.elementskit-accordion').forEach(function (accordion) {
+      accordion.addEventListener('click', function (e) {
+        // Only act when a card-header anchor (or a child of one) is clicked.
+        var toggler = e.target.closest('.elementskit-card-header a[data-target]');
+        if (!toggler) return;
+
+        // Stop the event here — prevents ElementsKit's jQuery handler from
+        // seeing it and pre-toggling 'active' on the card.
+        e.preventDefault();
+        e.stopImmediatePropagation();
+
+        var card      = toggler.closest('.elementskit-card');
+        var targetId  = toggler.getAttribute('data-target').replace('#', '');
+        var target    = document.getElementById(targetId);
+
+        // Read state NOW, before anything else has a chance to mutate it.
+        var isOpen = card.classList.contains('active');
+
+        // Close every card in this accordion.
+        accordion.querySelectorAll('.elementskit-card').forEach(function (c) {
+          c.classList.remove('active');
+          var col = c.querySelector('.collapse');
+          if (col) col.classList.remove('show');
+          var tog = c.querySelector('.ekit-accordion--toggler');
+          if (tog) {
+            tog.classList.add('collapsed');
+            tog.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Open the clicked card only if it was previously closed.
+        if (!isOpen) {
+          card.classList.add('active');
+          if (target) target.classList.add('show');
+          toggler.classList.remove('collapsed');
+          toggler.setAttribute('aria-expanded', 'true');
+        }
+      }, true /* useCapture — fires before ALL bubbling handlers */);
+    });
+  }());
+ </script>
+ <div class="whatsapp-chip">
+  <a href="https://wa.me/5491173616189?text=Hola%2C%20me%20interesa%20mejorar%20mi%20reputaci%C3%B3n%20online%20con%20rese%C3%B1as%20positivas" rel="noopener noreferrer" target="_blank">
+   <img alt="WhatsApp" class="whatsapp-icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"/>
+   <span>Chatea con nosotros</span>
+  </a>
+ </div>
+ <style>
+  .whatsapp-chip {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   width: max-content;
+   background-color: #25D366;
+   color: white;
+   padding: 14px 24px;
+   border-radius: 50px;
+   font-size: 15px;
+   font-family: 'Inter', sans-serif;
+   font-weight: 500;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+   transition: background-color 0.3s ease, transform 0.2s ease;
+   z-index: 9999;
+ }
+
+ .whatsapp-chip a {
+   text-decoration: none;
+   color: white;
+   display: flex;
+   align-items: center;
+   gap: 12px;
+ }
+
+ .whatsapp-chip:hover {
+   background-color: #1ebe5b;
+   transform: scale(1.05);
+ }
+
+ .whatsapp-chip .whatsapp-icon {
+   width: 32px;
+   height: 32px;
+ }
+ </style>
+ </body>
+</html>

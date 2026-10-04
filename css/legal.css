@@ -1,0 +1,119 @@
+/* DataTrackers — legal pages + home "Qué es" block + footer legal links */
+body.dt-legal-page #content.site-content { background-color: var(--dt-navy); }
+.dt-legal {
+  background-color: var(--dt-navy);
+  padding: 150px 24px 96px;
+}
+.dt-legal-article {
+  max-width: 820px;
+  margin: 0 auto;
+  font-family: var(--dt-font);
+  color: var(--dt-text-muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+.dt-legal-header {
+  border-bottom: 1px solid var(--dt-border);
+  padding-bottom: 28px;
+  margin-bottom: 36px;
+}
+.dt-legal-lang {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 6px 14px;
+  border: 1px solid rgba(13, 211, 255, 0.3);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-cyan);
+  text-decoration: none;
+}
+.dt-legal-lang:hover { background: rgba(13, 211, 255, 0.1); color: var(--dt-cyan); }
+.dt-legal-article h1 {
+  font-family: var(--dt-font);
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+  color: var(--dt-white);
+}
+.dt-legal-updated { margin: 0; font-size: 14px; color: var(--dt-text-muted); }
+.dt-legal-updated time { color: var(--dt-white); font-weight: 600; }
+.dt-legal-body h2 {
+  font-family: var(--dt-font);
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--dt-white);
+  margin: 44px 0 14px;
+  scroll-margin-top: 110px;
+}
+.dt-legal-body h3 {
+  font-family: var(--dt-font);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dt-white);
+  margin: 28px 0 8px;
+}
+.dt-legal-body p, .dt-legal-body li { color: var(--dt-text-muted); }
+.dt-legal-body p { margin: 0 0 14px; }
+.dt-legal-body ul { margin: 0 0 16px; padding-left: 22px; }
+.dt-legal-body li { margin-bottom: 6px; list-style: disc; }
+.dt-legal-body strong { color: var(--dt-white); font-weight: 600; }
+.dt-legal-body a, .dt-about a { color: var(--dt-cyan); text-decoration: underline; text-underline-offset: 3px; word-break: break-word; }
+.dt-legal-body a:hover, .dt-about a:hover { color: var(--dt-green); }
+.dt-legal-body code {
+  font-size: 0.9em;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: var(--dt-navy-light);
+  color: var(--dt-white);
+  word-break: break-all;
+}
+.dt-legal-lead { font-size: 18px; color: var(--dt-white) !important; }
+.dt-legal-callout {
+  margin: 20px 0 !important;
+  padding: 18px 22px;
+  border-left: 3px solid var(--dt-green);
+  border-radius: 0 var(--dt-radius) var(--dt-radius) 0;
+  background: var(--dt-navy-light);
+  color: var(--dt-white) !important;
+}
+
+/* Home: "Qué es DataTrackers" */
+.dt-about { padding: 88px 24px; border-top: 1px solid var(--dt-border); background-color: var(--dt-navy); }
+.dt-about-inner { max-width: 860px; margin: 0 auto; text-align: center; font-family: var(--dt-font); }
+.dt-about-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dt-green);
+}
+.dt-about h2 {
+  font-family: var(--dt-font);
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--dt-white);
+  margin: 0 0 20px;
+}
+.dt-about p { font-size: 17px; line-height: 1.7; color: var(--dt-text-muted); margin: 0 0 14px; }
+.dt-about .dt-about-en { font-size: 15px; margin-top: 24px; }
+.dt-about .dt-about-en strong { color: var(--dt-white); }
+
+/* Footer legal links (bottom bar) */
+.dt-footer-legal-links { margin-top: 6px; font-size: 14px; }
+.dt-footer-legal-links a { color: var(--dt-text-muted); text-decoration: none; }
+.dt-footer-legal-links a:hover { color: var(--dt-cyan); }
+
+@media (max-width: 767px) {
+  .dt-legal { padding: 120px 18px 64px; }
+  .dt-legal-body h2 { font-size: 21px; margin-top: 36px; }
+  .dt-legal-lead { font-size: 17px; }
+  .dt-about { padding: 64px 18px; }
+  .dt-about p { font-size: 16px; }
+}
